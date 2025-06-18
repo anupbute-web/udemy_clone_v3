@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <form action="/login" method="post">
+      <div>
+        <label for="name">Email :</label>
+        <input type="text" name="" id="name" required />
+      </div>
+      <div>
+        <label for="pass">Password :</label>
+        <input type="password" name="pass" id="pass" required />
+      </div>
+      <input type="submit" value="Submit" id="submit1" />
+    </form>
+    <script>
+      let myname = document.getElementById("name");
+
+      function check() {
+        const val = myname.value.trim();
+        const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+        myname.name = isEmail ? "email" : "username";
+      }
+
+      myname.addEventListener("input", check);
+    </script>
+  </body>
+</html>

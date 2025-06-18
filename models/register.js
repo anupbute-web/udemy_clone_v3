@@ -11,7 +11,7 @@ let register=new mongoose.Schema({
         required:true,
         trim:true
     },
-    password:{
+    pass:{
         type:String,
         required:true,
         trim:true
@@ -22,6 +22,6 @@ let register=new mongoose.Schema({
     }
 });
 
-let Register=mongoose.model("Register",register);
+let Register=mongoose.model("Register1",register);
 
 module.exports=Register;

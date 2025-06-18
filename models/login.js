@@ -1,12 +1,12 @@
 let mongoose=require("mongoose");
 
 let login=new mongoose.Schema({
-    LogStr:{
+    email:{
         type:String,
         required:true,
         trim:true
     },
-    password:{
+    pass:{
         type:String,
         required:true,
         trim:true
@@ -17,6 +17,6 @@ let login=new mongoose.Schema({
     }
 });
 
-let Login=mongoose.model("Login",login);
+let Login=mongoose.model("Login1",login);
 
 module.exports=Login;

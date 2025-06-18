@@ -9,24 +9,40 @@
     <form action="/register" method="post">
         <div>
             <label for="name">Name :</label>
-            <input type="text" name="username" id="name">
+            <input type="text" name="username" value="anup" id="name" required>
         </div>
         <div>
             <label for="email">Email :</label>
-            <input type="text" name="email" id="email">
+            <input type="email" name="email" value="anupbute2@gmail.com" id="email" required>
         </div>
         <div>
             <label for="pass">Password :</label>
-            <input type="text" name="pass" id="pass">
+            <input type="password" name="pass" value="hi" id="pass" required>
         </div>
         <div>
             <label for="cnfpass">Confirm Password :</label>
-            <input type="text" id="cnfpass">
+            <input type="password" value="hi" id="cnfpass" required>
         </div>
-        <input type="submit" value="Submit" id="submit">
+        <input type="submit" value="Submit" id="submit1" disabled>
     </form>
     <script>
+        let pass=document.getElementById("pass");
+        let cnfpass=document.getElementById("cnfpass");
+        let submit1=document.getElementById("submit1")
+
+        function check(){
+            if(pass.value===cnfpass.value){
+                submit1.disabled=false;
+            }else{
+                submit1.disabled=true;
+            }
+        }
+
+        pass.addEventListener("input",check)
+        cnfpass.addEventListener("input",check)
+
         
+
     </script>
 </body>
 </html>
